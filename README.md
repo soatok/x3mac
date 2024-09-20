@@ -50,8 +50,9 @@ Inputs:
 
 1. Bob's Keypair (`B_sk`, `B_pk`)
 2. Alice's Public Key (`A_pk`)
-3. Message (`m`)
-4. Authenticator (`t`)
+3. Ephemeral public key (`E_pk`)
+4. Message (`m`)
+5. Authenticator (`t`)
 
 Steps:
 
