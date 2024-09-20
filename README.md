@@ -72,6 +72,13 @@ Neil Madden wrote a blog post about [avoiding signatures](https://neilmadden.blo
 
 It's all Neil's fault!
 
+## What guarantees does this actually provide?
+
+If you actually use this, I can guarantee that your favorite cryptographer will give you a puzzled look.
+
+Both Alice and Bob can calculate the MAC, which is necessary to verify it. With a signature, you'd expect
+only Alice to be able to generate new signatures.
+
 ## Why not make an actual signature?
 
 That would require writing a variant of [Schnorr's identification protocol](https://www.zkdocs.com/docs/zkdocs/zero-knowledge-protocols/schnorr/)
