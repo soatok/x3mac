@@ -79,3 +79,16 @@ API is written).
 
 Slapping some ECDH into a KDF then using BLAKE2's MAC mode is one thing, but if I actually wrote a full-blown siganture
 algorithm (henceforth X3SIG), it would carry the risk of someone wanting to actually use it.
+
+## Is this really insecure?
+
+Not in any obvious way, no.
+
+Still, I don't have a machine-verifiable security proof or an academic paper to point you to. Nor has it been audited
+by a third party.
+
+Also, I wrote it in PHP.
+
+## Is the X3 thing because of furry speak?
+
+[rawr](https://github.com/soatok/rawr-x3dh)
