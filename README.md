@@ -62,3 +62,20 @@ Steps:
 3. Derive a symmetric auth key, as `k := H(ikm1 || ikm2 || A_pk || B_pk || E_pk)`
 4. Re-derive the authenticator, `t2 := MAC(k, m)`
 5. Compare `t2` with `t`, in constant-time.
+
+# Frequently Asked Questions (FAQ)
+
+## Why????
+
+Neil Madden wrote a blog post about [avoiding signatures](https://neilmadden.blog/2024/09/18/digital-signatures-and-how-to-avoid-them/).
+
+It's all Neil's fault!
+
+## Why not make an actual signature?
+
+That would require writing a variant of [Schnorr's identification protocol](https://www.zkdocs.com/docs/zkdocs/zero-knowledge-protocols/schnorr/)
+which would in turn require me to operate over [the Ristretto group](https://ristretto.group/) (due to how libsodium's
+API is written).
+
+Slapping some ECDH into a KDF then using BLAKE2's MAC mode is one thing, but if I actually wrote a full-blown siganture
+algorithm (henceforth X3SIG), it would carry the risk of someone wanting to actually use it.
